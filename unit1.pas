@@ -41,6 +41,8 @@ type
     procedure Button9Click(Sender: TObject);
     procedure ButtonADDClick(Sender: TObject);
     procedure ButtonSOLClick(Sender: TObject);
+    procedure ButtonMINClick(Sender: TObject);
+    procedure updateEingabeLabel(newValue: String);
   private
     { private declarations }
   public
@@ -51,81 +53,97 @@ var
   Form1: TForm1;
   eingabe : string;
   ergebnis : Integer;
+  operation : string;
+
 
 implementation
 
 {$R *.lfm}
 
 { TForm1 }
+procedure TForm1.updateEingabeLabel(newValue:String);
+begin
+     eingabe:=eingabe + newValue ;
+     Label2.caption := eingabe;
+end;
 
 procedure TForm1.Button0Click(Sender: TObject);
 begin
-  eingabe:=eingabe + '0' ;
-  Label2.caption := eingabe;
+  updateEingabeLabel('0');
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  eingabe:=eingabe + '1' ;
-  Label2.caption := eingabe;
+  updateEingabeLabel('1');
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
-  eingabe:=eingabe + '2';
-  Label2.caption := eingabe;
+  updateEingabeLabel('2');
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 begin
-  eingabe:=eingabe + '3';
-  Label2.caption := eingabe
+  updateEingabeLabel('3');
 end;
 
 procedure TForm1.Button4Click(Sender: TObject);
 begin
-  eingabe:=eingabe + '4';
-  Label2.caption := eingabe;
+  updateEingabeLabel('4');
 end;
 
 procedure TForm1.Button5Click(Sender: TObject);
 begin
-  eingabe:=eingabe + '5';
-  label2.caption := eingabe;
+  updateEingabeLabel('5');
 end;
 
 procedure TForm1.Button6Click(Sender: TObject);
 begin
-  eingabe:=eingabe + '6';
-  label2.caption := eingabe;
+  updateEingabeLabel('6');
 end;
 
 procedure TForm1.Button7Click(Sender: TObject);
 begin
-  eingabe:=eingabe + '7';
-  label2.caption := eingabe;
+  updateEingabeLabel('7');
 end;
 
 procedure TForm1.Button8Click(Sender: TObject);
 begin
-  eingabe:=eingabe + '8';
-  label2.caption:= eingabe
+  updateEingabeLabel('8');
 end;
 
 procedure TForm1.Button9Click(Sender: TObject);
 begin
-  eingabe:=eingabe + '9';
-  label2.caption := eingabe
+  updateEingabeLabel('9');
 end;
 
 procedure TForm1.ButtonADDClick(Sender: TObject);
 begin
-     ergebnis := ergebnis + strtoint(eingabe);
+     if eingabe <> '' then
+        ergebnis := ergebnis + strtoint(eingabe);
+        eingabe := '';
+        operation := '+';
 end;
+
+procedure TForm1.ButtonMINClick(Sender: TObject);
+begin
+     if eingabe <> '' then
+        ergebnis := ergebnis - strtoint(eingabe);
+        eingabe := '';
+        operation := '-';
+end;
+
+
 
 procedure TForm1.ButtonSOLClick(Sender: TObject);
 begin
-     Label2.Caption := inttostr(ergebnis);
+     if operation = '+' then
+       ergebnis := ergebnis + strtoint(eingabe);
+     if operation = '-' then
+       ergebnis := ergebnis - strtoint(eingabe);
+
+     Label2.caption := inttostr(ergebnis);
+     eingabe := '0';
 end;
 
 end.
