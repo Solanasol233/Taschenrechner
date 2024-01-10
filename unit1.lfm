@@ -127,6 +127,7 @@ object Form1: TForm1
     Top = 208
     Width = 40
     Caption = '/'
+    OnClick = ButtonDIVClick
     TabOrder = 11
   end
   object ButtonMIN: TButton
@@ -135,6 +136,7 @@ object Form1: TForm1
     Top = 256
     Width = 40
     Caption = '-'
+    OnClick = ButtonMINClick
     TabOrder = 12
   end
   object ButtonMUL: TButton
@@ -143,13 +145,15 @@ object Form1: TForm1
     Top = 232
     Width = 40
     Caption = '*'
+    OnClick = ButtonMULClick
     TabOrder = 13
   end
   object Label2: TLabel
-    Left = 335
+    Left = 407
     Height = 1
-    Top = 176
+    Top = 209
     Width = 1
+    Anchors = [akRight, akBottom]
     Font.CharSet = ANSI_CHARSET
     Font.Height = -27
     Font.Name = 'Impact'

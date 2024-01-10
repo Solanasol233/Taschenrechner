@@ -1,3 +1,5 @@
+//Lucas der Hühnergott war hier!!
+
 unit Unit1;
 
 {$mode objfpc}{$H+}
@@ -40,8 +42,10 @@ type
     procedure Button8Click(Sender: TObject);
     procedure Button9Click(Sender: TObject);
     procedure ButtonADDClick(Sender: TObject);
-    procedure ButtonSOLClick(Sender: TObject);
+    procedure ButtonDIVClick(Sender: TObject);
     procedure ButtonMINClick(Sender: TObject);
+    procedure ButtonMULClick(Sender: TObject);
+    procedure ButtonSOLClick(Sender: TObject);
     procedure updateEingabeLabel(newValue: String);
   private
     { private declarations }
@@ -52,7 +56,7 @@ type
 var
   Form1: TForm1;
   eingabe : string;
-  ergebnis : Integer;
+  ergebnis : real;
   operation : string;
 
 
@@ -125,12 +129,28 @@ begin
         operation := '+';
 end;
 
+procedure TForm1.ButtonDIVClick(Sender: TObject);
+begin
+  if eingabe <> '' then
+        ergebnis := ergebnis + strtoint(eingabe);
+        eingabe := '';
+        operation := '/';
+end;
+
 procedure TForm1.ButtonMINClick(Sender: TObject);
 begin
      if eingabe <> '' then
-        ergebnis := ergebnis - strtoint(eingabe);
+        ergebnis := ergebnis + strtoint(eingabe);
         eingabe := '';
         operation := '-';
+end;
+
+procedure TForm1.ButtonMULClick(Sender: TObject);
+begin
+   if eingabe <> '' then
+        ergebnis := ergebnis + strtoint(eingabe);
+        eingabe := '';
+        operation := '*';
 end;
 
 
@@ -141,8 +161,12 @@ begin
        ergebnis := ergebnis + strtoint(eingabe);
      if operation = '-' then
        ergebnis := ergebnis - strtoint(eingabe);
+     if operation = '*' then
+       ergebnis := ergebnis * strtoint(eingabe);
+     if operation = '/' then
+       ergebnis := ergebnis / strtoint(eingabe);
 
-     Label2.caption := inttostr(ergebnis);
+     Label2.caption := floattostr(ergebnis);
      eingabe := '0';
 end;
 
