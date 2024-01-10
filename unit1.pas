@@ -16,6 +16,8 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     Button0: TButton;
+    ButtonDEL: TButton;
+    ButtonSQR: TButton;
     ButtonSOL: TButton;
     ButtonADD: TButton;
     ButtonDIV: TButton;
@@ -42,10 +44,12 @@ type
     procedure Button8Click(Sender: TObject);
     procedure Button9Click(Sender: TObject);
     procedure ButtonADDClick(Sender: TObject);
+    procedure ButtonDELClick(Sender: TObject);
     procedure ButtonDIVClick(Sender: TObject);
     procedure ButtonMINClick(Sender: TObject);
     procedure ButtonMULClick(Sender: TObject);
     procedure ButtonSOLClick(Sender: TObject);
+    procedure ButtonSQRClick(Sender: TObject);
     procedure updateEingabeLabel(newValue: String);
   private
     { private declarations }
@@ -129,6 +133,13 @@ begin
         operation := '+';
 end;
 
+procedure TForm1.ButtonDELClick(Sender: TObject);
+begin
+  Label2.caption:='';
+  eingabe := '';
+  ergebnis := 0;
+end;
+
 procedure TForm1.ButtonDIVClick(Sender: TObject);
 begin
   if eingabe <> '' then
@@ -153,7 +164,13 @@ begin
         operation := '*';
 end;
 
-
+procedure TForm1.ButtonSQRClick(Sender: TObject);
+begin
+    if eingabe <> '' then
+        ergebnis := ergebnis + strtoint(eingabe);
+        operation := 'sqrt';
+        eingabe:='';
+end;
 
 procedure TForm1.ButtonSOLClick(Sender: TObject);
 begin
@@ -165,10 +182,15 @@ begin
        ergebnis := ergebnis * strtoint(eingabe);
      if operation = '/' then
        ergebnis := ergebnis / strtoint(eingabe);
+     if operation = 'sqrt' then
+       ergebnis := sqrt(ergebnis);
 
      Label2.caption := floattostr(ergebnis);
-     eingabe := '0';
+     eingabe := '';
+     operation := '';
 end;
+
+
 
 end.
 

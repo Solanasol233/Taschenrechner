@@ -10,7 +10,7 @@ object Form1: TForm1
   object Label1: TLabel
     Left = 232
     Height = 20
-    Top = 136
+    Top = 88
     Width = 110
     Caption = 'Taschenrechner'
     Font.CharSet = ANSI_CHARSET
@@ -151,7 +151,7 @@ object Form1: TForm1
   object Label2: TLabel
     Left = 407
     Height = 1
-    Top = 209
+    Top = 185
     Width = 1
     Anchors = [akRight, akBottom]
     Font.CharSet = ANSI_CHARSET
@@ -170,5 +170,23 @@ object Form1: TForm1
     Caption = '='
     OnClick = ButtonSOLClick
     TabOrder = 14
+  end
+  object ButtonSQR: TButton
+    Left = 368
+    Height = 25
+    Top = 184
+    Width = 40
+    Caption = 'sqrt'
+    OnClick = ButtonSQRClick
+    TabOrder = 15
+  end
+  object ButtonDEL: TButton
+    Left = 149
+    Height = 25
+    Top = 184
+    Width = 75
+    Caption = 'C'
+    OnClick = ButtonDELClick
+    TabOrder = 16
   end
 end
