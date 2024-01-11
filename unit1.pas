@@ -7,7 +7,7 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls, Math;
 
 type
 
@@ -16,6 +16,8 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     Button0: TButton;
+    ButtonFAC: TButton;
+    ButtonPOT: TButton;
     ButtonDEL: TButton;
     ButtonSQR: TButton;
     ButtonSOL: TButton;
@@ -46,8 +48,10 @@ type
     procedure ButtonADDClick(Sender: TObject);
     procedure ButtonDELClick(Sender: TObject);
     procedure ButtonDIVClick(Sender: TObject);
+    procedure ButtonFACClick(Sender: TObject);
     procedure ButtonMINClick(Sender: TObject);
     procedure ButtonMULClick(Sender: TObject);
+    procedure ButtonPOTClick(Sender: TObject);
     procedure ButtonSOLClick(Sender: TObject);
     procedure ButtonSQRClick(Sender: TObject);
     procedure updateEingabeLabel(newValue: String);
@@ -62,6 +66,7 @@ var
   eingabe : string;
   ergebnis : real;
   operation : string;
+  i: integer;
 
 
 implementation
@@ -148,6 +153,14 @@ begin
         operation := '/';
 end;
 
+procedure TForm1.ButtonFACClick(Sender: TObject);
+begin
+    if eingabe <> '' then
+        ergebnis := ergebnis + strtoint(eingabe);
+        eingabe := '';
+        operation := '!';
+end;
+
 procedure TForm1.ButtonMINClick(Sender: TObject);
 begin
      if eingabe <> '' then
@@ -162,6 +175,14 @@ begin
         ergebnis := ergebnis + strtoint(eingabe);
         eingabe := '';
         operation := '*';
+end;
+
+procedure TForm1.ButtonPOTClick(Sender: TObject);
+begin
+  if eingabe <> '' then
+    ergebnis := ergebnis + strtoint(eingabe);
+        operation := '^';
+        eingabe:='';
 end;
 
 procedure TForm1.ButtonSQRClick(Sender: TObject);
@@ -184,6 +205,11 @@ begin
        ergebnis := ergebnis / strtoint(eingabe);
      if operation = 'sqrt' then
        ergebnis := sqrt(ergebnis);
+     if operation = '^' then
+       ergebnis := ergebnis ** strtoint(eingabe);
+     //if operation = '!' then
+        //for i := strtoint(eingabe) to 1 do
+            //ergebnis := ergebnis * i;
 
      Label2.caption := floattostr(ergebnis);
      eingabe := '';
