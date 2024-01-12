@@ -194,6 +194,7 @@ begin
 end;
 
 procedure TForm1.ButtonSOLClick(Sender: TObject);
+var n:integer;
 begin
      if operation = '+' then
        ergebnis := ergebnis + strtoint(eingabe);
@@ -207,10 +208,14 @@ begin
        ergebnis := sqrt(ergebnis);
      if operation = '^' then
        ergebnis := ergebnis ** strtoint(eingabe);
-     //if operation = '!' then
-        //for i := strtoint(eingabe) to 1 do
-            //ergebnis := ergebnis * i;
+     if operation = '!' then
+       begin
+         n:= round(ergebnis);
+         ergebnis:=1;
+         for i := n downto 1 do
+            ergebnis := ergebnis * i;
 
+       end;
      Label2.caption := floattostr(ergebnis);
      eingabe := '';
      operation := '';

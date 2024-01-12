@@ -11,7 +11,7 @@ object Form1: TForm1
     Left = 232
     Height = 20
     Top = 88
-    Width = 110
+    Width = 121
     Caption = 'Taschenrechner'
     Font.CharSet = ANSI_CHARSET
     Font.Height = 20
