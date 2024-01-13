@@ -2,16 +2,16 @@ object Form1: TForm1
   Left = 223
   Height = 390
   Top = 105
-  Width = 461
+  Width = 811
   Caption = 'Form1'
   ClientHeight = 390
-  ClientWidth = 461
+  ClientWidth = 811
   LCLVersion = '1.6.0.4'
   object Label1: TLabel
     Left = 232
     Height = 20
     Top = 88
-    Width = 121
+    Width = 110
     Caption = 'Taschenrechner'
     Font.CharSet = ANSI_CHARSET
     Font.Height = 20
@@ -107,7 +107,7 @@ object Form1: TForm1
     Left = 149
     Height = 25
     Top = 280
-    Width = 150
+    Width = 75
     Caption = '0'
     OnClick = Button0Click
     TabOrder = 9
@@ -149,7 +149,7 @@ object Form1: TForm1
     TabOrder = 13
   end
   object Label2: TLabel
-    Left = 351
+    Left = 447
     Height = 1
     Top = 185
     Width = 1
@@ -206,5 +206,86 @@ object Form1: TForm1
     Caption = 'n!'
     OnClick = ButtonFACClick
     TabOrder = 18
+  end
+  object ButtonSIN: TButton
+    Left = 408
+    Height = 25
+    Top = 280
+    Width = 40
+    Caption = 'sin(x)'
+    OnClick = ButtonSINClick
+    TabOrder = 19
+  end
+  object ButtonCOS: TButton
+    Left = 408
+    Height = 25
+    Top = 256
+    Width = 40
+    Caption = 'cos(x)'
+    OnClick = ButtonCOSClick
+    TabOrder = 20
+  end
+  object ButtonTAN: TButton
+    Left = 408
+    Height = 25
+    Top = 232
+    Width = 40
+    Caption = 'tan(x)'
+    OnClick = ButtonTANClick
+    TabOrder = 21
+  end
+  object Button10POTx: TButton
+    Left = 408
+    Height = 25
+    Top = 208
+    Width = 40
+    Caption = '10^x'
+    OnClick = Button10POTxClick
+    TabOrder = 22
+  end
+  object Buttonln: TButton
+    Left = 408
+    Height = 25
+    Top = 184
+    Width = 40
+    Caption = 'ln'
+    OnClick = ButtonlnClick
+    TabOrder = 23
+  end
+  object Buttonlog: TButton
+    Left = 447
+    Height = 25
+    Top = 184
+    Width = 40
+    Caption = 'log'
+    OnClick = ButtonlogClick
+    TabOrder = 24
+  end
+  object Buttonlog10: TButton
+    Left = 447
+    Height = 25
+    Top = 208
+    Width = 40
+    Caption = 'log10'
+    OnClick = Buttonlog10Click
+    TabOrder = 25
+  end
+  object Buttonlog2: TButton
+    Left = 447
+    Height = 25
+    Top = 232
+    Width = 40
+    Caption = 'log2'
+    OnClick = Buttonlog2Click
+    TabOrder = 26
+  end
+  object ButtonCOM: TButton
+    Left = 224
+    Height = 25
+    Top = 280
+    Width = 75
+    Caption = ','
+    OnClick = ButtonCOMClick
+    TabOrder = 27
   end
 end
