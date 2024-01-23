@@ -1,17 +1,17 @@
 object Form1: TForm1
-  Left = 223
-  Height = 390
-  Top = 105
+  Left = 222
+  Height = 328
+  Top = 103
   Width = 811
   Caption = 'Form1'
-  ClientHeight = 390
+  ClientHeight = 328
   ClientWidth = 811
   LCLVersion = '1.6.0.4'
   object Label1: TLabel
     Left = 232
     Height = 20
     Top = 88
-    Width = 110
+    Width = 121
     Caption = 'Taschenrechner'
     Font.CharSet = ANSI_CHARSET
     Font.Height = 20
@@ -151,7 +151,7 @@ object Form1: TForm1
   object Label2: TLabel
     Left = 447
     Height = 1
-    Top = 185
+    Top = 123
     Width = 1
     Anchors = [akRight, akBottom]
     Font.CharSet = ANSI_CHARSET
@@ -287,5 +287,14 @@ object Form1: TForm1
     Caption = ','
     OnClick = ButtonCOMClick
     TabOrder = 27
+  end
+  object Button10: TButton
+    Left = 447
+    Height = 25
+    Top = 256
+    Width = 40
+    Caption = 'BMI'
+    OnClick = Button10Click
+    TabOrder = 28
   end
 end

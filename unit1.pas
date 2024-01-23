@@ -16,6 +16,7 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     Button0: TButton;
+    Button10: TButton;
     ButtonCOM: TButton;
     Buttonlog2: TButton;
     Buttonlog10: TButton;
@@ -45,6 +46,7 @@ type
     Label1: TLabel;
     Label2: TLabel;
     procedure Button0Click(Sender: TObject);
+    procedure Button10Click(Sender: TObject);
     procedure Button10POTxClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -85,6 +87,7 @@ var
   ergebnis : real;
   operation : string;
   i: integer;
+  Form2: TForm1;
 
 
 implementation
@@ -102,8 +105,6 @@ procedure TForm1.Button0Click(Sender: TObject);
 begin
   updateEingabeLabel('0');
 end;
-
-
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
@@ -153,6 +154,11 @@ end;
 procedure TForm1.ButtonCOMClick(Sender: TObject);
 begin
   updateEingabeLabel(',');
+end;
+
+procedure TForm1.Button10Click(Sender: TObject);
+begin
+   Form2.visible:=true;
 end;
 
 procedure TForm1.ButtonADDClick(Sender: TObject);
@@ -275,6 +281,7 @@ begin
         operation := 'tan';
         eingabe:='';
 end;
+
 procedure TForm1.Button10POTxClick(Sender: TObject);
 begin
     if eingabe <> '' then
