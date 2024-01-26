@@ -1,8 +1,51 @@
 object Form2: TForm2
   Left = 1041
-  Height = 240
+  Height = 316
   Top = 114
-  Width = 320
+  Width = 366
   Caption = 'Form2'
+  ClientHeight = 316
+  ClientWidth = 366
+  OnCreate = FormCreate
   LCLVersion = '1.6.0.4'
+  object Edit1: TEdit
+    Left = 24
+    Height = 23
+    Top = 32
+    Width = 80
+    TabOrder = 0
+    Text = 'Edit1'
+  end
+  object Edit2: TEdit
+    Left = 120
+    Height = 23
+    Top = 32
+    Width = 80
+    TabOrder = 1
+    Text = 'Edit2'
+  end
+  object Button1: TButton
+    Left = 24
+    Height = 25
+    Top = 72
+    Width = 107
+    Caption = 'Wie ist mein BMI'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 15
+    Top = 112
+    Width = 66
+    Caption = 'Dein BMI ist:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 96
+    Height = 1
+    Top = 112
+    Width = 1
+    ParentColor = False
+  end
 end

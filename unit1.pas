@@ -74,6 +74,7 @@ type
     procedure ButtonSOLClick(Sender: TObject);
     procedure ButtonSQRClick(Sender: TObject);
     procedure ButtonTANClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
     procedure updateEingabeLabel(newValue: String);
   private
     { private declarations }
@@ -87,14 +88,14 @@ var
   ergebnis : real;
   operation : string;
   i: integer;
-  Form2: TForm1;
 
 
 implementation
-
+uses unit2;
 {$R *.lfm}
 
 { TForm1 }
+
 procedure TForm1.updateEingabeLabel(newValue:String);
 begin
      eingabe:=eingabe + newValue ;
@@ -158,7 +159,7 @@ end;
 
 procedure TForm1.Button10Click(Sender: TObject);
 begin
-   Form2.visible:=true;
+   Form2.show;
 end;
 
 procedure TForm1.ButtonADDClick(Sender: TObject);
@@ -280,6 +281,11 @@ begin
         ergebnis := ergebnis + strtofloat(eingabe);
         operation := 'tan';
         eingabe:='';
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+
 end;
 
 procedure TForm1.Button10POTxClick(Sender: TObject);
