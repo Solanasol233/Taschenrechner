@@ -5,7 +5,8 @@ unit Unit2;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls, Math;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  ExtCtrls, Math;
 
 type
 
@@ -15,10 +16,12 @@ type
     Button1: TButton;
     Edit1: TEdit;
     Edit2: TEdit;
+    Image1: TImage;
     Label1: TLabel;
     Label2: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -35,6 +38,11 @@ implementation
 { TForm2 }
 
 procedure TForm2.FormCreate(Sender: TObject);
+begin
+
+end;
+
+procedure TForm2.Image1Click(Sender: TObject);
 begin
 
 end;
