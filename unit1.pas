@@ -17,6 +17,7 @@ type
     Button1: TButton;
     Button0: TButton;
     Button10: TButton;
+    Button11: TButton;
     ButtonCOM: TButton;
     Buttonlog2: TButton;
     Buttonlog10: TButton;
