@@ -16,7 +16,7 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     Button0: TButton;
-    Button10: TButton;
+
     Button11: TButton;
     ButtonCOM: TButton;
     Buttonlog2: TButton;
@@ -47,8 +47,8 @@ type
     Label1: TLabel;
     Label2: TLabel;
     procedure Button0Click(Sender: TObject);
-    procedure Button10Click(Sender: TObject);
     procedure Button10POTxClick(Sender: TObject);
+    procedure Button11Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -59,6 +59,7 @@ type
     procedure Button8Click(Sender: TObject);
     procedure Button9Click(Sender: TObject);
     procedure ButtonADDClick(Sender: TObject);
+    procedure ButtonBMIClick(Sender: TObject);
     procedure ButtonCOMClick(Sender: TObject);
     procedure ButtonCOSClick(Sender: TObject);
     procedure ButtonDELClick(Sender: TObject);
@@ -92,7 +93,7 @@ var
 
 
 implementation
-uses unit2;
+uses unit2, Unit5;
 {$R *.lfm}
 
 { TForm1 }
@@ -158,17 +159,21 @@ begin
   updateEingabeLabel(',');
 end;
 
-procedure TForm1.Button10Click(Sender: TObject);
-begin
-   Form2.show;
-end;
-
 procedure TForm1.ButtonADDClick(Sender: TObject);
 begin
      if eingabe <> '' then
         ergebnis := ergebnis + strtofloat(eingabe);
         eingabe := '';
         operation := '+';
+end;
+
+procedure TForm1.ButtonBMIClick(Sender: TObject);
+begin
+  Form2.show;
+
+  if Assigned(Form5) then
+
+    Form5.close;
 end;
 
 
@@ -296,6 +301,15 @@ begin
         operation := '10POTx';
         eingabe:='';
 end;
+
+procedure TForm1.Button11Click(Sender: TObject);
+begin
+  Form5.show;
+  if Assigned(Form2) then
+
+    Form2.close;
+end;
+
 
 procedure TForm1.ButtonSOLClick(Sender: TObject);
 var n:integer;

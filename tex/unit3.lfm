@@ -1,8 +1,0 @@
-object Form3: TForm3
-  Left = 1037
-  Height = 321
-  Top = 107
-  Width = 432
-  Caption = 'Form3'
-  LCLVersion = '1.6.0.4'
-end
