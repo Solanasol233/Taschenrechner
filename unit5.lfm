@@ -1,0 +1,178 @@
+object Form5: TForm5
+  Left = 1044
+  Height = 328
+  Top = 105
+  Width = 625
+  Caption = 'Form5'
+  ClientHeight = 328
+  ClientWidth = 625
+  LCLVersion = '1.6.0.4'
+  object GradeSpin1: TSpinEdit
+    Left = 40
+    Height = 23
+    Top = 32
+    Width = 50
+    OnChange = GradeSpin1Change
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 40
+    Height = 15
+    Top = 16
+    Width = 41
+    Caption = '1. Note:'
+    ParentColor = False
+  end
+  object GradeSpin2: TSpinEdit
+    Left = 104
+    Height = 23
+    Top = 32
+    Width = 50
+    OnChange = GradeSpin2Change
+    TabOrder = 1
+  end
+  object Label2: TLabel
+    Left = 104
+    Height = 15
+    Top = 16
+    Width = 41
+    Caption = '2. Note:'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 40
+    Height = 15
+    Top = 64
+    Width = 41
+    Caption = '3. Note:'
+    ParentColor = False
+  end
+  object GradeSpin3: TSpinEdit
+    Left = 40
+    Height = 23
+    Top = 80
+    Width = 50
+    OnChange = GradeSpin3Change
+    TabOrder = 2
+  end
+  object Label4: TLabel
+    Left = 104
+    Height = 15
+    Top = 64
+    Width = 41
+    Caption = '4. Note:'
+    ParentColor = False
+  end
+  object GradeSpin4: TSpinEdit
+    Left = 104
+    Height = 23
+    Top = 80
+    Width = 50
+    OnChange = GradeSpin4Change
+    TabOrder = 3
+  end
+  object GradeSpin5: TSpinEdit
+    Left = 40
+    Height = 23
+    Top = 128
+    Width = 50
+    OnChange = GradeSpin5Change
+    TabOrder = 4
+  end
+  object Label5: TLabel
+    Left = 40
+    Height = 15
+    Top = 112
+    Width = 41
+    Caption = '5. Note:'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 104
+    Height = 15
+    Top = 112
+    Width = 41
+    Caption = '6. Note:'
+    ParentColor = False
+  end
+  object GradeSpin6: TSpinEdit
+    Left = 104
+    Height = 23
+    Top = 128
+    Width = 50
+    OnChange = GradeSpin6Change
+    TabOrder = 5
+  end
+  object Label7: TLabel
+    Left = 176
+    Height = 15
+    Top = 64
+    Width = 85
+    Caption = 'Note Kursarbeit:'
+    ParentColor = False
+  end
+  object GradeSpinKA: TSpinEdit
+    Left = 176
+    Height = 23
+    Top = 80
+    Width = 50
+    OnChange = GradeSpinKAChange
+    TabOrder = 6
+  end
+  object SpinEdit1: TSpinEdit
+    Left = 300
+    Height = 23
+    Top = 32
+    Width = 50
+    OnChange = SpinEdit1Change
+    TabOrder = 7
+  end
+  object Label8: TLabel
+    Left = 300
+    Height = 15
+    Top = 12
+    Width = 95
+    Caption = 'Anzahl der Noten:'
+    ParentColor = False
+  end
+  object Label9: TLabel
+    Left = 300
+    Height = 15
+    Top = 64
+    Width = 58
+    Caption = 'Kursarbeit?'
+    ParentColor = False
+  end
+  object CheckBox1: TCheckBox
+    Left = 300
+    Height = 19
+    Top = 80
+    Width = 73
+    Caption = 'Kursarbeit'
+    TabOrder = 8
+  end
+  object Label10: TLabel
+    Left = 40
+    Height = 15
+    Top = 168
+    Width = 145
+    Caption = 'Dein Notendurchschnitt ist:'
+    ParentColor = False
+  end
+  object LabelZN: TLabel
+    Left = 192
+    Height = 1
+    Top = 168
+    Width = 1
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 176
+    Height = 25
+    Top = 126
+    Width = 75
+    Caption = 'BERECHNE!'
+    OnClick = Button1Click
+    TabOrder = 9
+  end
+end
